@@ -121,9 +121,10 @@ clf.score(x_test, y_test)
 
 ![image](images/artifacts.png)
 
-
 ## References
 
 [1] https://registry.terraform.io/providers/hashicorp/aws/latest/docs
+
 [3] https://docs.aws.amazon.com/
-[2] https://medium.com/mlops-community/deploying-mlflow-in-aws-app-runner-cc6caf7fb8e3 
+
+[2] https://medium.com/mlops-community/deploying-mlflow-in-aws-app-runner-cc6caf7fb8e3
