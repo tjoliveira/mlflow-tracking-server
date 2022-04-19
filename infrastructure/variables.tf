@@ -5,7 +5,7 @@ variable "name" {
 }
 
 variable "environment" {
-  description = "Environment. It will be part of application name and aws tags"
+  description = "Environment name to be used in the application name and aws tags"
   type        = string
   default     = "dev"
 }
@@ -47,7 +47,7 @@ variable "db_dialect" {
 variable "db_version" {
   description = "The version for the database."
   type = string
-  default = "8.0.23"
+  default = "8.0.28"
 }
 
 variable "db_instance_class" {

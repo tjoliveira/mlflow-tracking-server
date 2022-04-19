@@ -5,7 +5,7 @@ This repo contains infrastructure as code to quickly set up an MLflow Tracking s
 It uses the following AWS services:
 
 * S3
-* RDS (MySQL database
+* RDS (MySQL database)
 * Elastic Container Registry (ECR)
 * AWS Application Runner (APR
 
@@ -19,7 +19,9 @@ The components of a tracking are:
 * Backend store: a database used to store experiment metadata, parameters, and metrics;
 * Artifact store: a volume used to store artifacts, which are the file outputs of experiments, including files, plots, etc.
 
-The architecture followed in this project corresponds to a scenario described in the [tracking server documentation](), in which the MLflow Tracking server runs on a remote host (in this case the AWS Application Runner) with an artifact store set in an S3 bucket, and a backend store set in a MySQL database.
+The architecture followed in this project corresponds to a scenario described in the [tracking server documentation](https://www.mlflow.org/docs/latest/tracking.html), in which the MLflow Tracking server runs on a remote host (in this case the AWS Application Runner) with an artifact store set in an S3 bucket, and a backend store set in a MySQL database.
+
+The tracking server sits behind an [Nginx](https://www.nginx.com/) reverse proxy server which requires an authentication with a username and password. The credentials are set by the user at the time of deploying the infrastructure.
 
 ![image](images/scenario_5.png)
 
@@ -66,7 +68,9 @@ You will be prompted to input the following information:
 * mlflow_tracking_user (set by the user)
 * mlflow_tracking_password (set by the user)
 
-The console will output the tracking URI for the MLflow Tacking server as seen in the image below.
+The console will output the MLflow tracking URL as seen in the image below.
+
+![image](images/output.png)
 
 5. Destroy the infrastructure
 
@@ -109,4 +113,17 @@ clf.fit(x_train, y_train)
 clf.score(x_test, y_test)
 ```
 
-## Acknowledgements
+## Application
+
+![image](images/authentication.png)
+
+![image](images/experiments.png)
+
+![image](artifacts.png)
+
+
+## References
+
+[1] https://registry.terraform.io/providers/hashicorp/aws/latest/docs
+[3] https://docs.aws.amazon.com/
+[2] https://medium.com/mlops-community/deploying-mlflow-in-aws-app-runner-cc6caf7fb8e3 
