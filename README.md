@@ -119,7 +119,7 @@ clf.score(x_test, y_test)
 
 ![image](images/experiments.png)
 
-![image](artifacts.png)
+![image](images/artifacts.png)
 
 
 ## References
