@@ -43,7 +43,7 @@ Please configure the AWS CLI with your [Access Keys](https://docs.aws.amazon.com
 git clone https://github.com/mlflow-tracking-server
 ```
 
-2. Open  the *mlflow-server*/*infrastructure* directory
+2. Open  the *mlflow-tracking-server*/*infrastructure* directory
 
 ```bash
 cd mlflow-tracking-server/infrastructure
