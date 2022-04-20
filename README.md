@@ -7,7 +7,7 @@ It uses the following AWS services:
 * S3
 * RDS (MySQL database)
 * Elastic Container Registry (ECR)
-* AWS Application Runner (APR
+* AWS Application Runner (APR)
 
 ## MLFlow Architecture
 
@@ -40,13 +40,13 @@ Please configure the AWS CLI with your [Access Keys](https://docs.aws.amazon.com
 1. Clone the repository
 
 ```bash
-git clone https://github.com/mlflow-server
+git clone https://github.com/mlflow-tracking-server
 ```
 
 2. Open  the *mlflow-server*/*infrastructure* directory
 
 ```bash
-cd mlflow-server/infrastructure
+cd mlflow-tracking-server/infrastructure
 ```
 
 3. Initialize terraform
@@ -88,7 +88,7 @@ from sklearn import datasets
 from sklearn.model_selection import train_test_split
 from sklearn.tree import DecisionTreeClassifier
 
-os.environ["MLFLOW_TRACKING_USERNAME"] = <USERNMAME>
+os.environ["MLFLOW_TRACKING_USERNAME"] = <USERNAME>
 os.environ["MLFLOW_TRACKING_PASSWORD"] = <PASSWORD>
 
 mlflow.set_tracking_uri(<TRACKING_URI>)
